@@ -186,7 +186,7 @@ public class ApiService {
                                 
                                 BigInteger finalPriceParentBigInt= finalPriceParent.toBigInteger();
 
-                                 statusParent = totalDeduction.equals((finalPriceParentBigInt).multiply(BigInteger.valueOf(pdu)).multiply(BigInteger.valueOf(total)));
+                                 statusParent = totalDeductionParent.equals((finalPriceParentBigInt).multiply(BigInteger.valueOf(pdu)).multiply(BigInteger.valueOf(total)));
                                 }
                             reports.add(new ApiReport(api, amountBefore, amountAfter, totalDeduction, status, description, state, pdu,transactionId, groupPermission, userCode, parentUserCode,amountBeforeParent, amountAfterParent,totalDeductionParent, statusParent ));
                         }
@@ -249,7 +249,7 @@ public class ApiService {
                             System.out.println("Total deduction of parent user:- " + totalDeductionParent);
                             
                             BigInteger finalPriceParentBigInt= finalPriceParent.toBigInteger();
-                             statusParent = totalDeduction.equals((finalPriceParentBigInt).multiply(BigInteger.valueOf(pdu)));
+                             statusParent = totalDeductionParent.equals((finalPriceParentBigInt).multiply(BigInteger.valueOf(pdu)));
                             }
                         reports.add(new ApiReport(api, amountBefore, amountAfter, totalDeduction, status, description, state, pdu,transactionId, groupPermission, userCode, parentUserCode,amountBeforeParent, amountAfterParent,totalDeductionParent, statusParent ));
                     }
